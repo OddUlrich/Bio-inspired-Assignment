@@ -99,13 +99,7 @@ def saveParas(model, input_data, vec_size):
     print("Datas has been successfully saved in Excel files!")
     
     
-def saveDataset(X_train, Y_train, X_test, Y_test):
-    training_features = pd.DataFrame(X_train.data.numpy())
-    training_features.to_excel('training_features.xlsx', index=False)
-
-    training_class = pd.DataFrame(Y_train.data.numpy())
-    training_class.to_excel('training_class.xlsx', index=False)
-        
+def saveDataset(X_test, Y_test): 
     testing_features = pd.DataFrame(X_test.data.numpy())
     testing_features.to_excel('testing_features.xlsx', index=False)
         
@@ -113,20 +107,14 @@ def saveDataset(X_train, Y_train, X_test, Y_test):
     training_class.to_excel('testing_class.xlsx', index=False)
     
 def loadDataset():
-    X_train = pd.read_excel('training_features.xlsx', header=None)
-    Y_train = pd.read_excel('training_class.xlsx', header=None)
     X_test = pd.read_excel('testing_features.xlsx', header=None)
-    Y_test = pd.read_excel('testing_class.xlsx', header=None)
-    
-    X_train.drop(0, axis=0, inplace=True)
-    Y_train.drop(0, axis=0, inplace=True)
+    Y_test = pd.read_excel('testing_class.xlsx', header=None)  
+
     X_test.drop(0, axis=0, inplace=True)
     Y_test.drop(0, axis=0, inplace=True)
 
     # Create Tensors to hold inputs and outputs.
-    X_train = torch.Tensor(X_train.to_numpy()).float()
-    Y_train = torch.Tensor(Y_train.to_numpy()).long()
     X_test = torch.Tensor(X_test.to_numpy()).float()
     Y_test = torch.Tensor(Y_test.to_numpy()).long()
     
-    return X_train, Y_train, X_test, Y_test
+    return X_test, Y_test
