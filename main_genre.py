@@ -3,16 +3,17 @@
 @author: Ulrich
 """
 
-from data_loader import load_data
+from data_loader import load_data, min_max_norm
 from Net import Net, train_model, test_model
-from utils import confusion, F1_score, saveParas
+from utils import confusion, F1_score, saveParas, saveDataset, loadDataset
+
 
 ############################################
 # Hyper parameters
 all_features_num = 14
 hidden_num = 30
 classes_num = 3
-epochs_num = 500
+epochs_num = 1000
 learning_rate = 0.01
 
 genre_loc = 14 # Ignore the index column
@@ -34,9 +35,15 @@ features_num = len(selector)
 label_loc = genre_loc
 
 
-#X_train, Y_train, X_test, Y_test = data_loader.load_data('music-features-processed.xlsx', 
-#                                                         features_num, 
-#                                                         genre_loc)
+# Normalizing all features values into the range of 0 to 1.
+#
+#raw_data = pd.read_excel('music-features.xlsx', header=None)
+#raw_data.drop(raw_data.columns[0], axis=1, inplace=True)
+#raw_data.drop(0, axis=0, inplace=True)
+#
+#normalized = min_max_norm(raw_data, 14)
+#normalized.to_excel('music-features-processed.xlsx')
+
 
 X_train, Y_train, X_test, Y_test = load_data('music-features-processed.xlsx', 
                                              features_num, 
@@ -44,23 +51,30 @@ X_train, Y_train, X_test, Y_test = load_data('music-features-processed.xlsx',
                                              features_selector = selector,
                                              spliting_ratio=0.8)
 
-#X_train, Y_train, X_test, Y_test = data_loader.load_data('music-features-processed.xlsx', 
-#                                                         features_num, 
-#                                                         label_loc,
-#                                                         features_selector = selector)
-
-
 net = Net(features_num, hidden_num, classes_num)
-train_model(net, X_train, Y_train, lr=0.02, epochs=epochs_num, loss_bound=0.1)
+train_model(net, X_train, Y_train, lr=learning_rate, epochs=epochs_num)
 #train_model(net, X_train, Y_train, lr=0.01, epochs=epochs_num)
 
 accuracy, Y_pred = test_model(net, X_test, Y_test)
-#if accuracy > 45:
+#if accuracy > 60:
 #    saveParas(net, X_test, hidden_num+1)
 #    torch.save(net.state_dict(), 'net_model.pt')
+#    saveDataset(X_train, Y_train, X_test, Y_test)
 
 mat = confusion(X_test.size(0), classes_num, Y_pred, Y_test)
 print("Confusion Matrix：")
 print(mat)
 F1_score(mat)
+
+
+print("\n===============================================================")
+
+
+#x_train, y_train, x_test, y_test = loadDataset()
+#acc, pred = test_model(net, x_test, y_test)
+#
+#mat = confusion(x_test.size(0), classes_num, pred, y_test)
+#print("Confusion Matrix (after pruning)：")
+#print(mat)
+#F1_score(mat)
 

@@ -5,6 +5,7 @@
 
 import torch
 import numpy as np
+import pandas as pd
 import xlwt 
 
 # define a function to plot confusion matrix
@@ -41,9 +42,9 @@ def F1_score(m):
         recall.append(TP[i] / (TP[i] + FN[i]))
         F1.append(2 * precision[i] * recall[i] / (precision[i] + recall[i]))
         
-    print("Precision: {} ; \nAverage precision: {}".format(precision, np.mean(precision)))
-    print("Recall: {} ; \nAverage recall: {}".format(recall, np.mean(recall)))
-    print("F1 Score: {} ; \nAverage F1 Score: {}".format(F1, np.mean(F1)))
+    print("\nPrecision: {} ; \nAverage precision: {}".format(precision, np.mean(precision)))
+    print("\nRecall: {} ; \nAverage recall: {}".format(recall, np.mean(recall)))
+    print("\nF1 Score: {} ; \nAverage F1 Score: {}".format(F1, np.mean(F1)))
     
 # Write matrix data into an excel file.
 def saveExcel(data, path, sheet_num, fill_color=False):
@@ -98,5 +99,34 @@ def saveParas(model, input_data, vec_size):
     print("Datas has been successfully saved in Excel files!")
     
     
-    
+def saveDataset(X_train, Y_train, X_test, Y_test):
+    training_features = pd.DataFrame(X_train.data.numpy())
+    training_features.to_excel('training_features.xlsx', index=False)
 
+    training_class = pd.DataFrame(Y_train.data.numpy())
+    training_class.to_excel('training_class.xlsx', index=False)
+        
+    testing_features = pd.DataFrame(X_test.data.numpy())
+    testing_features.to_excel('testing_features.xlsx', index=False)
+        
+    training_class = pd.DataFrame(Y_test.data.numpy())
+    training_class.to_excel('testing_class.xlsx', index=False)
+    
+def loadDataset():
+    X_train = pd.read_excel('training_features.xlsx', header=None)
+    Y_train = pd.read_excel('training_class.xlsx', header=None)
+    X_test = pd.read_excel('testing_features.xlsx', header=None)
+    Y_test = pd.read_excel('testing_class.xlsx', header=None)
+    
+    X_train.drop(0, axis=0, inplace=True)
+    Y_train.drop(0, axis=0, inplace=True)
+    X_test.drop(0, axis=0, inplace=True)
+    Y_test.drop(0, axis=0, inplace=True)
+
+    # Create Tensors to hold inputs and outputs.
+    X_train = torch.Tensor(X_train.to_numpy()).float()
+    Y_train = torch.Tensor(Y_train.to_numpy()).long()
+    X_test = torch.Tensor(X_test.to_numpy()).float()
+    Y_test = torch.Tensor(Y_test.to_numpy()).long()
+    
+    return X_train, Y_train, X_test, Y_test

@@ -5,6 +5,8 @@
 
 import torch
 from Net import Net
+import numpy as np
+import pandas as pd
 
 load_net = Net(11, 30, 3)
 load_net.load_state_dict(torch.load('net_model.pt'))
@@ -26,3 +28,8 @@ load_net.eval()
 #print(new_net.hidden.bias.shape)
 #
 #
+
+
+    
+
+

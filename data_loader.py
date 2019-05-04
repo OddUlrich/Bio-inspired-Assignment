@@ -7,6 +7,14 @@ import pandas as pd
 import numpy as np
 import torch
 
+def min_max_norm(data, features_num):
+    for i in range(features_num):
+        vec = data.iloc[:, i]
+        delta = vec - vec.min()
+        new_range = vec.max() -  vec.min()
+        data.iloc[:, i] = delta / new_range
+    return data
+
 """
 Loading data from excel file.
     1. Remove the title of columns and rows.
@@ -39,7 +47,7 @@ def load_data(file_dir, features_num, label_index, features_selector=[], splitin
     mask = np.random.rand(len(data)) < spliting_ratio
     train_data = data[mask]
     test_data = data[~mask]
-    
+            
     train_input = train_data[:, :-1]
     train_output = train_data[:, -1]
     test_input = test_data[:, :-1]
