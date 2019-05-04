@@ -3,9 +3,10 @@
 @author: Ulrich
 """
 
+import torch
 from data_loader import load_data, min_max_norm
 from Net import Net, train_model, test_model
-from utils import confusion, F1_score, saveParas, saveDataset, loadDataset
+from utils import confusion, F1_score, saveParas, saveDataset
 
 
 ############################################
@@ -53,13 +54,12 @@ X_train, Y_train, X_test, Y_test = load_data('music-features-processed.xlsx',
 
 net = Net(features_num, hidden_num, classes_num)
 train_model(net, X_train, Y_train, lr=learning_rate, epochs=epochs_num)
-#train_model(net, X_train, Y_train, lr=0.01, epochs=epochs_num)
 
 accuracy, Y_pred = test_model(net, X_test, Y_test)
-#if accuracy > 60:
-#    saveParas(net, X_test, hidden_num+1)
-#    torch.save(net.state_dict(), 'net_model.pt')
-#    saveDataset(X_train, Y_train, X_test, Y_test)
+if accuracy > 40:
+    saveParas(net, X_test, hidden_num+1)
+    torch.save(net.state_dict(), 'net_model.pt')
+    saveDataset(X_train, Y_train, X_test, Y_test)
 
 mat = confusion(X_test.size(0), classes_num, Y_pred, Y_test)
 print("Confusion Matrix：")
@@ -67,14 +67,7 @@ print(mat)
 F1_score(mat)
 
 
-print("\n===============================================================")
+print("\n========================== END ==================================")
 
 
-#x_train, y_train, x_test, y_test = loadDataset()
-#acc, pred = test_model(net, x_test, y_test)
-#
-#mat = confusion(x_test.size(0), classes_num, pred, y_test)
-#print("Confusion Matrix (after pruning)：")
-#print(mat)
-#F1_score(mat)
 
