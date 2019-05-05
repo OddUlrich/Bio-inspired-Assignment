@@ -6,7 +6,13 @@
 import torch
 import matplotlib.pyplot as plt
 
-# Build a neural network structure.
+"""
+    Build a neural network structure.
+    - 3 layers neural network.
+    - Using sigmoid function as activation function.
+    - Using mean squared error (MSE) to calculate the loss of prediction.
+    - Using Adam to optimizer the model.
+"""
 class Net(torch.nn.Module):
     def __init__(self, input_size, hidden_size, output_size):
         super(Net, self).__init__()

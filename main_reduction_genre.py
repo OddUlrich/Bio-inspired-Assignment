@@ -13,6 +13,8 @@ load_net.load_state_dict(torch.load('net_model_genre.pt'))
 load_net.eval()
 
 """
+Manual operation on network reduction.
+
 Scheme for units removal:
     16 ->  2
     17  -> 1

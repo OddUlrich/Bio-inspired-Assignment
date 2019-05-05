@@ -31,15 +31,12 @@ GA_features_list = [1, 2, 3, 5, 6, 8, 9, 10, 11, 12, 14]
 
 ############################################
 
-#selector = GA_features_list
-#features_num = len(selector)
-#label_loc = genre_loc
-
 selector = GA_features_list
 features_num = len(selector)
+#label_loc = genre_loc
 label_loc = depressing_exiting_loc
 
-# Normalizing all features values into the range of 0 to 1.
+##Normalizing all features values into the range of 0 to 1.
 #
 #raw_data = pd.read_excel('music-features.xlsx', header=None)
 #raw_data.drop(raw_data.columns[0], axis=1, inplace=True)
@@ -59,6 +56,7 @@ net = Net(features_num, hidden_num, classes_num)
 train_model(net, X_train, Y_train, lr=learning_rate, epochs=epochs_num)
 
 accuracy, Y_pred = test_model(net, X_test, Y_test)
+##Save relevant parameter for analysis.
 #if accuracy > 40:
 #    saveParas(net, X_test, hidden_num+1)
 #    torch.save(net.state_dict(), 'net_model.pt')

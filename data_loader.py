@@ -7,6 +7,7 @@ import pandas as pd
 import numpy as np
 import torch
 
+# Min-max normalization into the range of 0 to 1.
 def min_max_norm(data, features_num):
     for i in range(features_num):
         vec = data.iloc[:, i]

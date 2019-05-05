@@ -9,10 +9,12 @@ from utils import confusion, F1_score, loadDataset
 
 # Reload the parameters of the trained model.
 load_net = Net(11, 30, 3)
-load_net.load_state_dict(torch.load('net_model.pt'))
+load_net.load_state_dict(torch.load('net_model_subjective_rating.pt'))
 load_net.eval()
 
 """
+Manual operation on network reduction.
+
 Scheme for units removal:
     17 ->  3
     24  -> 6

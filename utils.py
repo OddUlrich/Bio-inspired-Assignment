@@ -8,7 +8,7 @@ import numpy as np
 import pandas as pd
 import xlwt 
 
-# define a function to plot confusion matrix
+# Define a function to plot confusion matrix
 def confusion(sample_num, labels_num, label_pred, label):
     matrix = torch.zeros(labels_num, labels_num)
     _, target = torch.max(label, 1)
@@ -20,6 +20,7 @@ def confusion(sample_num, labels_num, label_pred, label):
 
     return matrix
 
+# Calculate precision, recall and F1 score with an input of 3*3 confusion matrix.
 def F1_score(m):
     TP, FP, FN = [], [], []
     precision, recall, F1 = [], [], []
@@ -47,6 +48,7 @@ def F1_score(m):
     print("\nF1 Score: {} ; \nAverage F1 Score: {}".format(F1, np.mean(F1)))
     
 # Write matrix data into an excel file.
+# The cells with value less than 15 will be filled with blue for finding the similarity.
 def saveExcel(data, path, sheet_num, fill_color=False):
     file = xlwt.Workbook()
     sheet1 = file.add_sheet(sheet_num, cell_overwrite_ok=True)
@@ -77,6 +79,7 @@ def vector_angle(vec1, vec2):
 
     return angle
     
+# Save relevant parameter for further observation on reduce the neural network.
 def saveParas(model, input_data, vec_size):
     weight_mat = model.hidden.weight.data
     saveExcel(weight_mat, 'weight.xls', u'sheet1')
@@ -98,7 +101,7 @@ def saveParas(model, input_data, vec_size):
     
     print("Datas has been successfully saved in Excel files!")
     
-    
+# Save test data for validating the reduced network.
 def saveDataset(X_test, Y_test): 
     testing_features = pd.DataFrame(X_test.data.numpy())
     testing_features.to_excel('testing_features.xlsx', index=False)
@@ -106,6 +109,7 @@ def saveDataset(X_test, Y_test):
     training_class = pd.DataFrame(Y_test.data.numpy())
     training_class.to_excel('testing_class.xlsx', index=False)
     
+# Load test data for validating the reduced network.
 def loadDataset():
     X_test = pd.read_excel('testing_features.xlsx', header=None)
     Y_test = pd.read_excel('testing_class.xlsx', header=None)  
