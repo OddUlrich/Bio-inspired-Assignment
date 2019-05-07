@@ -24,6 +24,7 @@ class Net(torch.nn.Module):
         z_hidden = self.hidden(input)
         a_hidden = torch.sigmoid(z_hidden)
         out = self.output(a_hidden)
+        out = torch.sigmoid(out)
         out = self.softmax(out)
         return out
     

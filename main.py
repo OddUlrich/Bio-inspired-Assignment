@@ -14,7 +14,7 @@ from utils import confusion, F1_score, saveParas, saveDataset
 all_features_num = 14
 hidden_num = 30
 classes_num = 3
-epochs_num = 1000
+epochs_num = 2000
 learning_rate = 0.01
 
 genre_loc = 14 # Ignore the index column
@@ -33,8 +33,8 @@ GA_features_list = [1, 2, 3, 5, 6, 8, 9, 10, 11, 12, 14]
 
 selector = GA_features_list
 features_num = len(selector)
-#label_loc = genre_loc
-label_loc = depressing_exiting_loc
+label_loc = genre_loc
+# label_loc = depressing_exiting_loc
 
 ##Normalizing all features values into the range of 0 to 1.
 #
