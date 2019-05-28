@@ -232,7 +232,14 @@
       <option name="project" value="LOCAL" />
       <updated>1557708443327</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="New dataset.">
+      <created>1557808768859</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1557808768860</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TodoView">
@@ -274,7 +281,8 @@
     <MESSAGE value="Sigmoid function in the output layer." />
     <MESSAGE value="Move assignment into directory." />
     <MESSAGE value="Init files." />
-    <option name="LAST_COMMIT_MESSAGE" value="Init files." />
+    <MESSAGE value="New dataset." />
+    <option name="LAST_COMMIT_MESSAGE" value="New dataset." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://D:/5.SystemTool/Anaconda/Lib/site-packages/pandas/io/excel.py">
