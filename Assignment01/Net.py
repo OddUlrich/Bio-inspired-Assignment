@@ -13,6 +13,8 @@ import matplotlib.pyplot as plt
     - Using mean squared error (MSE) to calculate the loss of prediction.
     - Using Adam to optimizer the model.
 """
+
+
 class Net(torch.nn.Module):
     def __init__(self, input_size, hidden_size, output_size):
         super(Net, self).__init__()
@@ -31,6 +33,7 @@ class Net(torch.nn.Module):
         z_hidden = self.hidden(input)
         a_hidden = torch.sigmoid(z_hidden)
         return a_hidden
+
 
 def train_model(model, input, label, lr=0.01, epochs=500, loss_bound=None):
     criterion = torch.nn.MSELoss()
