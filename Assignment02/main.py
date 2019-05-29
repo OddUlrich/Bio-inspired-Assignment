@@ -4,22 +4,47 @@
 """
 
 from data_loader import data_loader
+from RNN_model import RNN_model
 
 import torch.nn as nn
 
-data = data_loader('music-affect_v2')
+'''
+Dimension Statement:
+    1  :  (1028, 16)
+    2  :  (980, 16)
+    3  :  (932, 16)
+    4  :  (964, 16)
+    5  :  (868, 16)
+    6  :  (836, 16)
+    7  :  (808, 16)
+    8  :  (840, 16)
+    9  :  (956, 16)
+    10 :  (1104, 16)
+    11 :  (956, 16)
+    12 :  (965, 16)
+'''
+input_dim = 255 # Fake.
+
+hidden_dim = 30
+layer_dim = 2
+output_dim = 4  # Four kinds of genres within 12 songs.
 
 
-class LSTM_net(nn.Module):
-    def __init__(self, input_size, hidden_size, classes_num):
-        super(LSTM_net, self).__init__()
-        self.LSTM = nn.LSTM(input_size, hidden_size, 1)
-        self.fc = nn.Linear(hidden_size, classes_num)
-        self.softmax = nn.Softmax(dim=1)
-        
-    def forward(self, input_seq, hprev, cprev):
-        # fixme: processing on input with .view()
-        output, hc = self.LSTM(input, (hprev, cprev))
-        output = self.fc(output)
-        output = self.softmax(output)
-        return output
+
+seqs, labels = data_loader('music-affect_v2')
+
+print(seqs.size)
+print(labels.shape)
+    
+nn.utils.rnn.pack_padded_sequence()
+
+rnn = RNN_model(input_dim, hidden_dim, layer_dim, output_dim)
+
+nn.utils.rnn.pad_packed_sequence()
+
+print(rnn)
+print(rnn.hidden_dim)
+print(rnn.layer_dim)
+print(rnn.rnn.all_weights)
+print(rnn.fc.weight)
+print(rnn.softmax.dim)

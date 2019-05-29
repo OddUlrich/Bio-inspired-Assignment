@@ -4,15 +4,17 @@
 """
 
 import pandas as pd
-
+import numpy as np
 
 def data_loader(file_dir):
     # Using a dictionary with song number as a key to store the sequences.
     data_seq_dic = {}
 
+    seqs = []
+    labels = []
+
     # Song number is from 1 to 12.
     for song_num in range(1, 13):
-        print(song_num)
         # Loading dataset.
         file_path = file_dir + '/S' + str(song_num) + '.xlsx'
         raw_data = pd.read_excel(file_path, header=None)
@@ -24,6 +26,15 @@ def data_loader(file_dir):
         data_seq = raw_data[1:]    
         
         # Insert the sequences with its song number as a key.
-        data_seq_dic[song_num] = data_seq
+        data_seq_dic[song_num] = data_seq.T
         
-    return data_seq_dic
+        seqs.append(data_seq.T)
+        
+        label = np.zeros((4))
+        label[int(song_num / 4)] = 1
+        labels.append(label)
+        
+    for key, value in data_seq_dic.items():
+         print(key, ': ', value.shape)  
+         
+    return seqs, labels
