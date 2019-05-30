@@ -27,11 +27,13 @@ input_dim = 255 # Fake.
 
 hidden_dim = 30
 layer_dim = 2
-output_dim = 4  # Four kinds of genres within 12 songs.
+output_dim = 3  # Four kinds of genres within 12 songs.
 
+sample_num = 16 * 12
+target_num = 3
+max_seq_len = 1104
 
-
-seqs, labels = data_loader('music-affect_v2')
+seqs, labels = data_loader('music-affect_v2', sample_num, max_seq_len, targer_num)
 
 print(seqs.size)
 print(labels.shape)
