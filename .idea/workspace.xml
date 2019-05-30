@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="812364a3-9208-4f06-950f-e8a87668fa28" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment02/.ipynb_checkpoints/main-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment02/.ipynb_checkpoints/main-checkpoint.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assignment02/data_loader.py" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment02/data_loader.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assignment02/main.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment02/main.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assignment02/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment02/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment02/music-affect_v2/Testing data.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment02/music-affect_v2/Training data.xlsx" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,9 +30,16 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assignment01/data_loader.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="565">
-              <caret line="68" column="29" selection-start-line="68" selection-start-column="24" selection-end-line="68" selection-end-column="29" />
+            <state relative-caret-position="219">
+              <caret line="28" column="20" selection-start-line="28" selection-end-line="76" selection-end-column="51" />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assignment01/main_reduction_genre.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-114" />
           </provider>
         </entry>
       </file>
@@ -305,7 +314,14 @@
       <option name="project" value="LOCAL" />
       <updated>1559174379503</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Data processing.">
+      <created>1559213893711</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1559213893711</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TodoView">
@@ -371,7 +387,8 @@
     <MESSAGE value="Workplace initialization." />
     <MESSAGE value="Revision starts！" />
     <MESSAGE value="Data division." />
-    <option name="LAST_COMMIT_MESSAGE" value="Data division." />
+    <MESSAGE value="Data processing." />
+    <option name="LAST_COMMIT_MESSAGE" value="Data processing." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://D:/5.SystemTool/Anaconda/Lib/site-packages/pandas/io/excel.py">
@@ -423,16 +440,18 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
           <caret line="6" selection-start-line="6" selection-end-line="6" />
-          <folding>
-            <element signature="e#49#84#0" expanded="true" />
-          </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assignment01/main_reduction_genre.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-114" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assignment01/data_loader.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="565">
-          <caret line="68" column="29" selection-start-line="68" selection-start-column="24" selection-end-line="68" selection-end-column="29" />
+        <state relative-caret-position="219">
+          <caret line="28" column="20" selection-start-line="28" selection-end-line="76" selection-end-column="51" />
         </state>
       </provider>
     </entry>

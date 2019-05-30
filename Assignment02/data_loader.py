@@ -8,33 +8,66 @@ import numpy as np
 import torch
 
 
-def data_loader(file_dir, sample_num, max_seq_len, target_num):
-    # Using a dictionary with song number as a key to store the sequences.
-    data_seq_dic = {}
-
-    seqs = np.zeros((sample_num, max_seq_len))
-    labels = np.zeros((sample_num, target_num))
-
-    group_size = 16
-    # Song number is from 0 to 11.
-    for song_num in range(12):
-        # Loading dataset.
-        file_path = file_dir + '/S' + str(song_num+1) + '.xlsx'
-        raw_data = pd.read_excel(file_path, header=None)
-        
-        # Drop the first column as it is references to the data.
-        raw_data.drop(raw_data.columns[0], axis=1, inplace=True)
+def data_loader():
+    ''' Loading training data '''
+    # Load all training data.
+    raw_train_data = pd.read_excel('Training data.xlsx', header=None)
     
-        # Remove the headings of features.
-        data_seq = raw_data[1:]    
-        
-        # Insert the sequences with its song number as a key.
-        data_seq_dic[song_num+1] = data_seq.T.to_numpy()
-        
-        seqs[group_size*(song_num): group_size*(song_num+1)] = data_seq.T.to_numpy()
-        labels[group_size*(song_num): group_size*(song_num+1), song_num] = 1
-        
-    for key, value in data_seq_dic.items():
-         print(key, ': ', value.shape)  
-         
-    return seqs, labels
+    # Drop the first column as it is references to the time sequence indices.
+    raw_train_data.drop(raw_train_data.columns[0], axis=1, inplace=True)
+    
+    print(raw_train_data.iloc[0:5, 0:6])
+
+    # Shuffle data and remove the first row of time counting.
+    shuffled_train = raw_train_data.T.sample(frac=1).reset_index(drop=True)
+    
+    # Skip the first two columns of song number and genre classes.
+    x_train = shuffled_train.iloc[:, 2:].to_numpy()
+
+    # Create one-hot vector for y_train with the second column of genre classes.
+    class_train = shuffled_train.iloc[:, 1]
+    y_train = np.zeros((class_train.shape[0], 3))
+    for i in range(class_train.shape[0]):
+        y_train[i][int(class_train[i])-1] = 1
+
+    # Create Tensors.
+    x_train = x_train.astype(dtype='float32')
+    y_train = y_train.astype(dtype='int64')
+    input_train = torch.Tensor(x_train).float()
+    label_train = torch.Tensor(y_train).long()
+    
+#    print(input_train.shape)
+#    print(label_train.shape)
+    
+    ''' Loading testing data '''
+    # Load all training data.
+    raw_test_data = pd.read_excel('Testing data.xlsx', header=None)
+    
+    # Drop the first column as it is references to the time sequence indices.
+    raw_test_data.drop(raw_test_data.columns[0], axis=1, inplace=True)
+    
+    print(raw_test_data.iloc[0:5, 0:6])
+
+    # Shuffle data and remove the first row of time counting.
+    shuffled_test = raw_test_data.T.sample(frac=1).reset_index(drop=True)
+    
+    # Skip the first two columns of song number and genre classes.
+    x_test = shuffled_test.iloc[:, 2:].to_numpy()
+
+    # Create one-hot vector for y_train with the second column of genre classes.
+    class_test = shuffled_test.iloc[:, 1]
+    y_test = np.zeros((class_test.shape[0], 3))
+    for i in range(class_test.shape[0]):
+        y_test[i][int(class_test[i])-1] = 1
+
+    # Create Tensors.
+    x_test = x_test.astype(dtype='float32')
+    y_test = y_test.astype(dtype='int64')
+    input_test = torch.Tensor(x_test).float()
+    label_test = torch.Tensor(y_test).long()
+    
+#    print(input_test.shape)
+#    print(label_test.shape)
+    
+    return input_train, label_train, input_test, label_test
+    
