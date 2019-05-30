@@ -35,13 +35,20 @@ def load_data(file_dir, features_num, label_index, features_selector=[], splitin
     shuffled_data = raw_data[1:].sample(frac=1).reset_index(drop=True)
     
     data = np.zeros((shuffled_data.shape[0], features_num + 1))
+    # if features_selector != []:
+    #     # The features_selector is a list of index of the selected features.
+    #     for i in range(len(features_selector)):
+    #         data[:, i-1] = shuffled_data.iloc[:, features_selector[i-1]]
+    # else:
+    #     data[:, :features_num] = shuffled_data.iloc[:, :features_num]
+
     if features_selector != []:
         # The features_selector is a list of index of the selected features.
-        for i in range(len(features_selector)):
-            data[:, i-1] = shuffled_data.iloc[:, features_selector[i-1]]
+        for i in range(features_num):
+            data[:, i] = shuffled_data.iloc[:, features_selector[i]-1]
     else:
         data[:, :features_num] = shuffled_data.iloc[:, :features_num]
-    
+
     data[:, -1] = shuffled_data.iloc[:, label_index]
         
     # Randomly split data into training set and testing set.

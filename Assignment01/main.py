@@ -3,8 +3,7 @@
 @author: Ulrich
 """
 
-import torch
-from data_loader import load_data, min_max_norm
+from data_loader import load_data
 from Net import Net, train_model, test_model
 from utils import confusion, F1_score, saveParas, saveDataset
 
