@@ -20,13 +20,6 @@ class RNN_model(nn.Module):
         self.softmax = nn.LogSoftmax(dim=1)
         
     def forward(self, x, seq_lens):
-#        h0 = Variable(torch.zeros(self.layer_dim, x.size(0), self.hidden_dim))
-#        
-#        out, hn = self.rnn(x, h0.detach())
-#        out = self.fc(out[:, -1, :])
-#        out = self.softmax(out)
-#        return out, hn
-                
         h0 = Variable(torch.zeros(self.layer_dim, x.size(0), self.hidden_dim))
         
 #        x = pack_padded_sequence(x, seq_lens, batch_first = True)    
@@ -40,7 +33,6 @@ class RNN_model(nn.Module):
 
 def train_model(model, input, label, seq_lens, lr=0.01, epochs=500):  
     model.train()
-    
     criterion = nn.CrossEntropyLoss()
     optimizer = torch.optim.Adam(model.parameters(), lr=lr)
     all_losses = []
@@ -73,7 +65,6 @@ def train_model(model, input, label, seq_lens, lr=0.01, epochs=500):
     
 def test_model(model, input, label, seq_lens):  
     model.eval()
-    
     output, hidden = model(input, seq_lens)
     
     _, prediction = torch.max(output, 1)
@@ -85,5 +76,3 @@ def test_model(model, input, label, seq_lens):
     print('Testing Accuracy: %.2f %%' % (accuracy))
  
     return accuracy, prediction
-
-    

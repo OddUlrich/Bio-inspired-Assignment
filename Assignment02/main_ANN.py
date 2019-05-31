@@ -24,10 +24,6 @@ depressing_exiting_loc = 16
 all_features_list = list(range(1, all_features_num+1))
 GA_features_list = [1, 2, 3, 5, 6, 8, 9, 10, 11, 12, 14]
 
-#SD_MRMR_features_list = [1, 2, 3, 5, 6, 7, 9, 10, 12, 14]
-#SFS_features_list = [3, 4, 7, 10, 11]
-#SFFS_features_list = [3, 4, 10, 11]
-
 ############################################
 
 selector = GA_features_list
@@ -45,7 +41,7 @@ label_loc = genre_loc
 #normalized.to_excel('music-features-processed.xlsx')
 
 
-X_train, Y_train, X_test, Y_test = load_data('music-features-processed.xlsx', 
+X_train, Y_train, X_test, Y_test = load_data('music-affect_v1/music-features-processed.xlsx',
                                              features_num, 
                                              label_loc,
                                              features_selector = selector,
