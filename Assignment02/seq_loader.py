@@ -8,7 +8,7 @@ import pandas as pd
 import torch
 
 
-def data_loader():
+def seq_loader():
     ''' Loading training data '''
     # Load all training data.
     raw_train_data = pd.read_excel('Training data.xlsx', header=None)

@@ -3,13 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="812364a3-9208-4f06-950f-e8a87668fa28" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment01/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment01/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment02/.ipynb_checkpoints/main-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment02/.ipynb_checkpoints/main-checkpoint.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment02/RNN_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment02/RNN_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment02/data_loader.py" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment02/data_loader.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment02/main.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment02/main.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment02/data_loader.py" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment02/seq_loader.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assignment02/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment02/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment02/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment02/utils.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,43 +15,22 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assignment01/Net.py">
+        <entry file="file://$PROJECT_DIR$/Assignment02/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1824">
-              <caret line="97" column="32" selection-start-line="97" selection-start-column="32" selection-end-line="97" selection-end-column="32" />
+            <state relative-caret-position="209">
+              <caret line="17" column="12" lean-forward="true" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
               <folding>
-                <element signature="e#49#61#0" expanded="true" />
+                <element signature="e#50#85#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Assignment01/data_loader.py">
+        <entry file="file://$PROJECT_DIR$/Assignment02/seq_loader.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="52" column="8" lean-forward="true" selection-start-line="52" selection-start-column="8" selection-end-line="52" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assignment02/main.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
-              <folding>
-                <element signature="e#49#84#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assignment02/data_loader.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="25" column="56" selection-start-line="25" selection-start-column="56" selection-end-line="25" selection-end-column="56" />
+            <state relative-caret-position="304">
+              <caret line="18" column="41" lean-forward="true" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
               <folding>
                 <element signature="e#49#67#0" expanded="true" />
               </folding>
@@ -81,10 +55,11 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/Net.py" />
         <option value="$PROJECT_DIR$/main.py" />
-        <option value="$PROJECT_DIR$/Assignment01/Net.py" />
-        <option value="$PROJECT_DIR$/Assignment02/main.py" />
         <option value="$PROJECT_DIR$/Assignment01/data_loader.py" />
         <option value="$PROJECT_DIR$/Assignment02/data_loader.py" />
+        <option value="$PROJECT_DIR$/Assignment01/Net.py" />
+        <option value="$PROJECT_DIR$/Assignment02/main.py" />
+        <option value="$PROJECT_DIR$/Assignment02/seq_loader.py" />
       </list>
     </option>
   </component>
@@ -370,7 +345,14 @@
       <option name="project" value="LOCAL" />
       <updated>1559230151886</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Ass02: Try packed sequence for data set.">
+      <created>1559273994642</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1559273994642</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TodoView">
@@ -384,6 +366,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28599736" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -478,7 +461,8 @@
     <MESSAGE value="Data processing." />
     <MESSAGE value="Ass02: data processing and come out with training data and testing data." />
     <MESSAGE value="Ass02: implemented rnn model can get a basic predict result." />
-    <option name="LAST_COMMIT_MESSAGE" value="Ass02: implemented rnn model can get a basic predict result." />
+    <MESSAGE value="Ass02: Try packed sequence for data set." />
+    <option name="LAST_COMMIT_MESSAGE" value="Ass02: Try packed sequence for data set." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://D:/5.SystemTool/Anaconda/Lib/site-packages/pandas/io/excel.py">
@@ -548,10 +532,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Assignment01/data_loader.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="52" column="8" selection-start-line="52" selection-start-column="8" selection-end-line="52" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Assignment01/Net.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1824">
-          <caret line="97" column="32" selection-start-line="97" selection-start-column="32" selection-end-line="97" selection-end-column="32" />
+        <state relative-caret-position="428">
+          <caret line="93" column="42" lean-forward="true" selection-start-line="93" selection-start-column="42" selection-end-line="93" selection-end-column="42" />
           <folding>
             <element signature="e#49#61#0" expanded="true" />
           </folding>
@@ -560,28 +551,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assignment02/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        <state relative-caret-position="209">
+          <caret line="17" column="12" lean-forward="true" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
           <folding>
-            <element signature="e#49#84#0" expanded="true" />
+            <element signature="e#50#85#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assignment02/data_loader.py">
+    <entry file="file://$PROJECT_DIR$/Assignment02/seq_loader.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="25" column="56" selection-start-line="25" selection-start-column="56" selection-end-line="25" selection-end-column="56" />
+        <state relative-caret-position="304">
+          <caret line="18" column="41" lean-forward="true" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
           <folding>
             <element signature="e#49#67#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assignment01/data_loader.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="52" column="8" lean-forward="true" selection-start-line="52" selection-start-column="8" selection-end-line="52" selection-end-column="8" />
         </state>
       </provider>
     </entry>
