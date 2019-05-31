@@ -3,8 +3,8 @@
 @author: Ulrich
 """
 
-import pandas as pd
 import numpy as np
+import pandas as pd
 import torch
 
 
@@ -20,6 +20,7 @@ def data_loader():
 
     # Skip the first two columns of song number and genre classes.
     x_train = raw_train_data.T.iloc[:, 2:].sample(frac=1).reset_index(drop=True).to_numpy()
+#    x_train = raw_train_data.T.iloc[:, 2:].to_numpy()
 
     # Create one-hot vector for y_train with the second column of genre classes.
     class_train = raw_train_data.T.iloc[:, 1].to_numpy()
@@ -48,7 +49,8 @@ def data_loader():
 
     # Skip the first two columns of song number and genre classes.
     x_test = raw_test_data.T.iloc[:, 2:].sample(frac=1).reset_index(drop=True).to_numpy()
-
+#    x_test = raw_test_data.T.iloc[:, 2:].to_numpy()
+    
     # Create one-hot vector for y_train with the second column of genre classes.
     class_test = raw_test_data.T.iloc[:, 1].to_numpy()
     y_test = np.zeros((class_test.shape[0], 3))

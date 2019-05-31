@@ -3,16 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="812364a3-9208-4f06-950f-e8a87668fa28" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment01/data_loader.py" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment01/data_loader.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assignment01/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment01/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assignment02/.ipynb_checkpoints/main-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment02/.ipynb_checkpoints/main-checkpoint.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment02/Code_v1/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment02/utils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assignment02/RNN_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment02/RNN_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment02/Testing data.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment02/Testing data.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment02/Training data.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment02/Training data.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assignment02/data_loader.py" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment02/data_loader.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assignment02/main.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment02/main.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assignment02/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment02/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment02/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment02/utils.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,8 +22,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assignment01/Net.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="445">
-              <caret line="97" column="32" lean-forward="true" selection-start-line="97" selection-start-column="32" selection-end-line="97" selection-end-column="32" />
+            <state relative-caret-position="1824">
+              <caret line="97" column="32" selection-start-line="97" selection-start-column="32" selection-end-line="97" selection-end-column="32" />
               <folding>
                 <element signature="e#49#61#0" expanded="true" />
               </folding>
@@ -37,26 +34,31 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assignment01/data_loader.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-57">
-              <caret line="47" column="69" selection-start-line="47" selection-start-column="69" selection-end-line="47" selection-end-column="69" />
+            <state relative-caret-position="437">
+              <caret line="52" column="8" lean-forward="true" selection-start-line="52" selection-start-column="8" selection-end-line="52" selection-end-column="8" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assignment02/Code_v1/main.py">
+        <entry file="file://$PROJECT_DIR$/Assignment02/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-57" />
+            <state relative-caret-position="95">
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
+              <folding>
+                <element signature="e#49#84#0" expanded="true" />
+              </folding>
+            </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assignment01/main.py">
+        <entry file="file://$PROJECT_DIR$/Assignment02/data_loader.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="509">
-              <caret line="72" lean-forward="true" selection-start-line="72" selection-end-line="72" />
+            <state relative-caret-position="133">
+              <caret line="25" column="56" selection-start-line="25" selection-start-column="56" selection-end-line="25" selection-end-column="56" />
               <folding>
-                <element signature="e#49#82#0" expanded="true" />
+                <element signature="e#49#67#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -82,14 +84,15 @@
         <option value="$PROJECT_DIR$/Assignment01/Net.py" />
         <option value="$PROJECT_DIR$/Assignment02/main.py" />
         <option value="$PROJECT_DIR$/Assignment01/data_loader.py" />
+        <option value="$PROJECT_DIR$/Assignment02/data_loader.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="2148" />
-    <option name="y" value="39" />
-    <option name="width" value="792" />
-    <option name="height" value="784" />
+    <option name="x" value="240" />
+    <option name="y" value="127" />
+    <option name="width" value="1440" />
+    <option name="height" value="774" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -97,6 +100,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -114,17 +118,10 @@
               <item name="Bio-inspired-Assignment" type="462c0819:PsiDirectoryNode" />
               <item name="Assignment02" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Bio-inspired-Assignment" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Bio-inspired-Assignment" type="462c0819:PsiDirectoryNode" />
-              <item name="Assignment02" type="462c0819:PsiDirectoryNode" />
-              <item name="Code_v1" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -149,7 +146,28 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Python.main (1)">
+    <configuration name="main (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="comp8420-ass1" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Assignment02" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Assignment02/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="comp8420-ass1" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -215,6 +233,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.main (1)" />
         <item itemvalue="Python.main" />
         <item itemvalue="Python.main_genre" />
         <item itemvalue="Python.main_reduction" />
@@ -344,7 +363,14 @@
       <option name="project" value="LOCAL" />
       <updated>1559217911697</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Ass02: implemented rnn model can get a basic predict result.">
+      <created>1559230151885</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1559230151886</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TodoView">
@@ -357,20 +383,19 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1911" y="-9" width="1298" height="1002" extended-state="6" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28616852" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28599736" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.7278732" visible="true" weight="0.32790697" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.7278732" weight="0.32790697" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32956153" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.26976743" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.26912183" />
       <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.4993395" weight="0.3286119" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.27212682" side_tool="true" weight="0.3281471" />
       <window_info anchor="bottom" id="Python Console" order="10" sideWeight="0.4993395" weight="0.3286119" />
@@ -423,6 +448,20 @@
         </entry>
       </map>
     </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Finished paper." />
@@ -438,20 +477,14 @@
     <MESSAGE value="Data division." />
     <MESSAGE value="Data processing." />
     <MESSAGE value="Ass02: data processing and come out with training data and testing data." />
-    <option name="LAST_COMMIT_MESSAGE" value="Ass02: data processing and come out with training data and testing data." />
+    <MESSAGE value="Ass02: implemented rnn model can get a basic predict result." />
+    <option name="LAST_COMMIT_MESSAGE" value="Ass02: implemented rnn model can get a basic predict result." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://D:/5.SystemTool/Anaconda/Lib/site-packages/pandas/io/excel.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="227">
           <caret line="284" column="15" selection-start-line="284" selection-start-column="15" selection-end-line="284" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/5.SystemTool/Anaconda/Lib/site-packages/pandas/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" column="23" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -465,13 +498,6 @@
     <entry file="file://$PROJECT_DIR$/Assignment01/main_reduction_genre.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-114" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assignment02/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assignment01/utils.py">
@@ -493,31 +519,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assignment01/Net.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="445">
-          <caret line="97" column="32" lean-forward="true" selection-start-line="97" selection-start-column="32" selection-end-line="97" selection-end-column="32" />
-          <folding>
-            <element signature="e#49#61#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assignment02/data_loader.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-114" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assignment02/Code_v1/data_loader.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
           <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assignment02/Code_v1/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-57" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assignment01/main.py">
@@ -530,10 +536,52 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Assignment02/Code_v1/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-57" />
+      </provider>
+    </entry>
+    <entry file="file://D:/5.SystemTool/Anaconda/Lib/site-packages/pandas/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assignment01/Net.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1824">
+          <caret line="97" column="32" selection-start-line="97" selection-start-column="32" selection-end-line="97" selection-end-column="32" />
+          <folding>
+            <element signature="e#49#61#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assignment02/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+          <folding>
+            <element signature="e#49#84#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assignment02/data_loader.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="25" column="56" selection-start-line="25" selection-start-column="56" selection-end-line="25" selection-end-column="56" />
+          <folding>
+            <element signature="e#49#67#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Assignment01/data_loader.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-57">
-          <caret line="47" column="69" selection-start-line="47" selection-start-column="69" selection-end-line="47" selection-end-column="69" />
+        <state relative-caret-position="437">
+          <caret line="52" column="8" lean-forward="true" selection-start-line="52" selection-start-column="8" selection-end-line="52" selection-end-column="8" />
         </state>
       </provider>
     </entry>

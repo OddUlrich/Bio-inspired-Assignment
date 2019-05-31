@@ -13,7 +13,7 @@ from utils import confusion, F1_score, saveParas, saveDataset
 all_features_num = 14
 hidden_num = 30
 classes_num = 3
-epochs_num = 2000
+epochs_num = 1000
 learning_rate = 0.01
 
 genre_loc = 14 # Ignore the index column

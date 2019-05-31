@@ -6,6 +6,7 @@
 import torch
 import torch.nn as nn
 from torch.autograd import Variable
+from torch.nn.utils.rnn import pack_padded_sequence, pad_packed_sequence
 import matplotlib.pyplot as plt
 
 class RNN_model(nn.Module):
@@ -18,22 +19,34 @@ class RNN_model(nn.Module):
         self.fc = nn.Linear(hidden_dim, output_dim)
         self.softmax = nn.LogSoftmax(dim=1)
         
-    def forward(self, x):
+    def forward(self, x, seq_lens):
+#        h0 = Variable(torch.zeros(self.layer_dim, x.size(0), self.hidden_dim))
+#        
+#        out, hn = self.rnn(x, h0.detach())
+#        out = self.fc(out[:, -1, :])
+#        out = self.softmax(out)
+#        return out, hn
+                
         h0 = Variable(torch.zeros(self.layer_dim, x.size(0), self.hidden_dim))
         
+#        x = pack_padded_sequence(x, seq_lens, batch_first = True)    
         out, hn = self.rnn(x, h0.detach())
+#        out, _ = pad_packed_sequence(out, batch_first = True) 
+        
         out = self.fc(out[:, -1, :])
         out = self.softmax(out)
         return out, hn
     
 
-def train_model(model, input, label, lr=0.01, epochs=500):  
+def train_model(model, input, label, seq_lens, lr=0.01, epochs=500):  
+    model.train()
+    
     criterion = nn.CrossEntropyLoss()
     optimizer = torch.optim.Adam(model.parameters(), lr=lr)
     all_losses = []
     
     for epoch in range(1, epochs+1):
-        output, hidden = model(input)
+        output, hidden = model(input, seq_lens)
         
         loss = criterion(output, torch.max(label, 1)[1])
         all_losses.append(loss)
@@ -58,8 +71,10 @@ def train_model(model, input, label, lr=0.01, epochs=500):
     plt.show()
     
     
-def test_model(model, input, label):  
-    output, hidden = model(input)
+def test_model(model, input, label, seq_lens):  
+    model.eval()
+    
+    output, hidden = model(input, seq_lens)
     
     _, prediction = torch.max(output, 1)
     _, target = torch.max(label, 1)

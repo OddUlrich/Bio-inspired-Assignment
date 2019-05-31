@@ -96,6 +96,7 @@ def test_model(model, input, label):
     correct = sum(label_pred.data.numpy() == target.data.numpy())
     total = len(label_pred)
     accuracy = 100*correct/total
+
     print('Testing Accuracy: %.2f %%' % (accuracy))
  
     return accuracy, label_pred

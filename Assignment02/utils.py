@@ -39,9 +39,18 @@ def F1_score(m):
     FN.append(m[2][0] + m[2][1])
     
     for i in range(3):    
-        precision.append(TP[i] / (TP[i] + FP[i]))
-        recall.append(TP[i] / (TP[i] + FN[i]))
-        F1.append(2 * precision[i] * recall[i] / (precision[i] + recall[i]))
+        if TP[i] + FP[i] == 0:
+            precision.append(0)
+        else:
+            precision.append(TP[i] / (TP[i] + FP[i]))
+        if TP[i] + FN[i] == 0:
+            recall.append(0)
+        else:
+            recall.append(TP[i] / (TP[i] + FN[i]))
+        if precision[i] + recall[i] == 0:
+            F1.append(0)
+        else:            
+            F1.append(2 * precision[i] * recall[i] / (precision[i] + recall[i]))
         
     print("\nPrecision: {} ; \nAverage precision: {}".format(precision, np.mean(precision)))
     print("\nRecall: {} ; \nAverage recall: {}".format(recall, np.mean(recall)))
