@@ -16,7 +16,7 @@ all_features_num = 14
 hidden_num = 30
 classes_num = 3
 epochs_num = 1000
-learning_rate = 0.03
+learning_rate = 0.01
 
 genre_loc = 14 # Ignore the index column
 disturbing_conforting_loc = 15
@@ -57,7 +57,7 @@ accuracy, Y_pred = test_model(net, X_test, Y_test)
 print("Execution time: %s ms" % ((time.time() - start_time)*1000))
 
 #Save relevant parameter for analysis.
-if accuracy > 50:
+if accuracy > 40:
     saveNNParas(net, X_test, hidden_num)
     torch.save(net.state_dict(), 'net_model.pt')
     saveDataset(X_train, Y_train, 'training')

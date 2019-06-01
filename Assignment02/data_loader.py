@@ -6,7 +6,6 @@
 import pandas as pd
 import numpy as np
 import torch
-from random import randint, shuffle
 
 
 # Min-max normalization into the range of 0 to 1.
@@ -24,7 +23,7 @@ Loading data from excel file.
     1. Remove the title of columns and rows.
     2. Transform data features with min-max normalization into range of 0 to 1.
     3. Select the features that are filtered by selection algorithm.
-    4. Randomly divide data every 4 samples into training set and testing set to keep the same distribution.
+    4. Divide data into training set and testing set to keep the same distribution.
     5. Shuffle the data into random order.
     6. Transform data into Tensor form, and then return them,
 """
@@ -37,29 +36,30 @@ def load_data(file_dir, features_num, label_index, features_selector=[], splitin
     raw_data.drop(raw_data.columns[0], axis=1, inplace=True)
 
     # Remove the headings of features.
-    shuffled_data = raw_data[1:]
-    data = np.zeros((shuffled_data.shape[0], features_num + 1))
+    all_data = raw_data[1:]
+    data = np.zeros((all_data.shape[0], features_num + 1))
     if features_selector != []:
         # The features_selector is a list of index of the selected features.
         for i in range(features_num):
-            data[:, i] = shuffled_data.iloc[:, features_selector[i]-1]
+            data[:, i] = all_data.iloc[:, features_selector[i]-1]
     else:
-        data[:, :features_num] = shuffled_data.iloc[:, :features_num]
+        data[:, :features_num] = all_data.iloc[:, :features_num]
 
-    data[:, -1] = shuffled_data.iloc[:, label_index]
+    data[:, -1] = all_data.iloc[:, label_index]
         
-    # Randomly split data every 4 samples into training set and testing set.
-    mask = np.ones(len(data), dtype=bool)
-    for i in range(0, len(data), 4):
-        offset = randint(0, 3)
-        mask[i+offset] = False
-
-    train_data = data[mask]
-    test_data = data[~mask]
-          
+    # Divide data into training set and testing set to keep the same distribution.
+    sorted_data = data[data[:,-1].argsort()]
+    train_data = np.zeros((144, sorted_data.shape[1]))
+    test_data = np.zeros((48, sorted_data.shape[1]))
+    for i in range(3):
+        train_data[i*48: (i+1)*48, :] = sorted_data[i*64: i*64+48, :]
+        test_data[i*16: (i+1)*16, :] = sorted_data[i*64+48: (i+1)*64, :]
+        
     # Shuffle data.
-    shuffle(train_data)
-    shuffle(test_data)
+    permutation = np.random.permutation(train_data.shape[0])
+    train_data = train_data[permutation, :]
+    permutation = np.random.permutation(test_data.shape[0])
+    test_data = test_data[permutation, :]
     
     train_input = train_data[:, :-1]
     train_output = train_data[:, -1]
@@ -92,7 +92,7 @@ def load_data(file_dir, features_num, label_index, features_selector=[], splitin
 def seq_loader():
     ''' Loading training data '''
     # Load all training data.
-    raw_train_data = pd.read_excel('Training data.xlsx', header=None)
+    raw_train_data = pd.read_excel('Training sequence.xlsx', header=None)
 
     # Drop the first column as it is references to the time sequence indices.
     raw_train_data.drop(raw_train_data.columns[0], axis=1, inplace=True)
@@ -114,7 +114,7 @@ def seq_loader():
 
     ''' Loading testing data '''
     # Load all training data.
-    raw_test_data = pd.read_excel('Testing data.xlsx', header=None)
+    raw_test_data = pd.read_excel('Testing sequence.xlsx', header=None)
 
     # Drop the first column as it is references to the time sequence indices.
     raw_test_data.drop(raw_test_data.columns[0], axis=1, inplace=True)

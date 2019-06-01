@@ -102,14 +102,10 @@ def vector_angle(vec1, vec2):
 
 # Save relevant parameter for further observation on reduce the neural network.
 def saveNNParas(model, input_data, vec_size):
-    weight_mat = model.hidden.weight.data
-    saveExcel(weight_mat, 'weight.xls', u'sheet1')
-
     a_hidden = model.getActivationVec(input_data)
-    saveExcel(a_hidden[:, :] - 0.5, 'activation.xls', u'sheet1')
+#    saveExcel(a_hidden[:, :] - 0.5, 'activation.xls', u'sheet1')
     
     vectorangle_mat = np.zeros((vec_size, vec_size))
-
     for i in range(vec_size):
         for j in  range(vec_size):
             if i == j:
@@ -118,7 +114,7 @@ def saveNNParas(model, input_data, vec_size):
                 vectorangle_mat[i][j] = vector_angle(a_hidden[:, i], a_hidden[:, j])
     saveExcel(vectorangle_mat, 'vector_angle.xls', u'sheet1', bVector=True)
     
-    print("Datas has been successfully saved in Excel files!")
+    print("Datas has been successfully saved in Excel files!\n")
     
 # Save test data for validating the reduced network.
 def saveDataset(x, y, sub_title):
