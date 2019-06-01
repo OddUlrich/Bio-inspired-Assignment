@@ -6,6 +6,8 @@
 import torch
 from Net import Net, test_model
 from utils import confusion, F1_score, loadDataset
+import time
+
 
 # Reload the parameters of the trained model.
 load_net = Net(11, 30, 3)
@@ -46,7 +48,11 @@ new_net.eval()
 
 # Reload the test dateset and evaluate the shrinked network.
 x_test, y_test = loadDataset()
+
+start_time = time.time()
 acc, pred = test_model(new_net, x_test, y_test)
+print("Execution time: %s ms" % ((time.time() - start_time)*1000))
+
 
 mat = confusion(x_test.size(0), 3, pred, y_test)
 print("Confusion Matrix (after pruning)：")

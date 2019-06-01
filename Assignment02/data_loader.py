@@ -98,10 +98,10 @@ def seq_loader():
     raw_train_data.drop(raw_train_data.columns[0], axis=1, inplace=True)
 
     # Skip the first two columns of song number and genre classes.
-    x_train = raw_train_data.T.iloc[:, 2:].sample(frac=1).reset_index(drop=True).to_numpy()
-    #    x_train = raw_train_data.T.iloc[:, 2:].to_numpy()
+#    x_train = raw_train_data.T.iloc[:, 2:].sample(frac=1).reset_index(drop=True).to_numpy()
+    x_train = raw_train_data.T.iloc[:, 2:].to_numpy()
 
-    # Create one-hot vector for y_train with the second column of genre classes.
+#     Create one-hot vector for y_train with the second column of genre classes.
     class_train = raw_train_data.T.iloc[:, 1].to_numpy()
     y_train = np.zeros((class_train.shape[0], 3))
     for i in range(class_train.shape[0]):
@@ -120,8 +120,8 @@ def seq_loader():
     raw_test_data.drop(raw_test_data.columns[0], axis=1, inplace=True)
 
     # Skip the first two columns of song number and genre classes.
-    x_test = raw_test_data.T.iloc[:, 2:].sample(frac=1).reset_index(drop=True).to_numpy()
-    #    x_test = raw_test_data.T.iloc[:, 2:].to_numpy()
+#    x_test = raw_test_data.T.iloc[:, 2:].sample(frac=1).reset_index(drop=True).to_numpy()
+    x_test = raw_test_data.T.iloc[:, 2:].to_numpy()
 
     # Create one-hot vector for y_train with the second column of genre classes.
     class_test = raw_test_data.T.iloc[:, 1].to_numpy()

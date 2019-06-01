@@ -5,7 +5,8 @@
 
 from data_loader import load_data
 from Net import Net, train_model, test_model
-from utils import confusion, F1_score, saveParas, saveDataset
+from utils import confusion, F1_score, saveNNParas, saveDataset
+import time
 
 
 ############################################
@@ -50,10 +51,13 @@ X_train, Y_train, X_test, Y_test = load_data('music-affect_v1/music-features-pro
 net = Net(features_num, hidden_num, classes_num)
 train_model(net, X_train, Y_train, lr=learning_rate, epochs=epochs_num)
 
+start_time = time.time()
 accuracy, Y_pred = test_model(net, X_test, Y_test)
+print("Execution time: %s ms" % ((time.time() - start_time)*1000))
+
 ##Save relevant parameter for analysis.
 #if accuracy > 40:
-#    saveParas(net, X_test, hidden_num+1)
+#    saveNNParas(net, X_test, hidden_num+1)
 #    torch.save(net.state_dict(), 'net_model.pt')
 #    saveDataset(X_test, Y_test)
 

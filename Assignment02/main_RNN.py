@@ -13,8 +13,8 @@ import numpy as np
 ############################################
 # Hyper parameters
 input_dim = 1
-hidden_dim = 50
-layer_dim = 2
+hidden_dim = 20
+layer_dim = 1
 output_dim = 3  # Four kinds of genres within 12 songs.
 
 epochs = 1000

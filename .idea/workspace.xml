@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="812364a3-9208-4f06-950f-e8a87668fa28" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment02/RNN_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment02/RNN_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment02/data_loader.py" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment02/data_loader.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment02/main_ANN.py" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment02/main_ANN.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment02/main_RNN.py" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment02/main_RNN.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment02/music-features-processed.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment02/music-affect_v1/music-features-processed.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment02/music-features.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment02/music-affect_v1/music-features.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment02/seq_loader.py" beforeDir="false" />
-    </list>
+    <list default="true" id="812364a3-9208-4f06-950f-e8a87668fa28" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +35,7 @@
         <entry file="file://$PROJECT_DIR$/Assignment02/main_RNN.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="238">
-              <caret line="47" column="5" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
+              <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
               <folding>
                 <element signature="e#50#83#0" expanded="true" />
               </folding>
@@ -91,9 +82,9 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="240" />
-    <option name="y" value="127" />
+    <option name="y" value="126" />
     <option name="width" value="1440" />
-    <option name="height" value="774" />
+    <option name="height" value="775" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -323,7 +314,14 @@
       <option name="project" value="LOCAL" />
       <updated>1559274257195</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Revised data loader file and add rnn papers.">
+      <created>1559284092792</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1559284092792</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TodoView">
@@ -337,14 +335,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28599736" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.7278732" visible="true" weight="0.32719547" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.7278732" weight="0.32719547" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -434,7 +431,8 @@
     <MESSAGE value="Ass02: implemented rnn model can get a basic predict result." />
     <MESSAGE value="Ass02: Try packed sequence for data set." />
     <MESSAGE value="Rename and combine two assignments." />
-    <option name="LAST_COMMIT_MESSAGE" value="Rename and combine two assignments." />
+    <MESSAGE value="Revised data loader file and add rnn papers." />
+    <option name="LAST_COMMIT_MESSAGE" value="Revised data loader file and add rnn papers." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://D:/5.SystemTool/Anaconda/Lib/site-packages/pandas/io/excel.py">
@@ -584,7 +582,7 @@
     <entry file="file://$PROJECT_DIR$/Assignment02/main_RNN.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
-          <caret line="47" column="5" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
+          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
           <folding>
             <element signature="e#50#83#0" expanded="true" />
           </folding>

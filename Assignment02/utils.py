@@ -89,7 +89,7 @@ def vector_angle(vec1, vec2):
     return angle
     
 # Save relevant parameter for further observation on reduce the neural network.
-def saveParas(model, input_data, vec_size):
+def saveNNParas(model, input_data, vec_size):
     weight_mat = model.hidden.weight.data
     saveExcel(weight_mat, 'weight.xls', u'sheet1')
 
