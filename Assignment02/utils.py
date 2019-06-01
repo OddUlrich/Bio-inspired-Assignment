@@ -58,22 +58,33 @@ def F1_score(m):
     
 # Write matrix data into an excel file.
 # The cells with value less than 15 will be filled with blue for finding the similarity.
-def saveExcel(data, path, sheet_num, fill_color=False):
+def saveExcel(data, path, sheet_num, bVector=False):
     file = xlwt.Workbook()
     sheet1 = file.add_sheet(sheet_num, cell_overwrite_ok=True)
     
     # Color of cells.
     st = xlwt.easyxf('pattern: pattern solid;')
     st.pattern.pattern_fore_colour = 4
-    
+
+    sd = xlwt.easyxf('pattern: pattern solid;')
+    sd.pattern.pattern_fore_colour = 8
+
+    row = 0
+
     [h, l] = data.shape
     for i in range(h):
         for j in range(l):
-            if fill_color and (i != 0 and j!= 0 and i != j) and data[i, j] < 15:
-                sheet1.write(i, j, data[i, j].item(), st)
+            if bVector:
+                if i != 0 and j != 0 and i < j:
+                    if (data[i, j] < 10) or (data[i, j] > 170):
+                        sheet1.write(row, 0, i)
+                        sheet1.write(row, 1, j)
+                        sheet1.write(row, 2, data[i, j].item())
+                        row += 1
             else:
                 sheet1.write(i, j, data[i, j].item())
     file.save(path)
+
 
 # The input vectors should be numpy vector form.
 def vector_angle(vec1, vec2):
@@ -81,53 +92,52 @@ def vector_angle(vec1, vec2):
     list2 = vec2.data.numpy()
 
     val = np.dot(list1, list2) / np.linalg.norm(list1) / np.linalg.norm(list2)
-    radian = np.arccos(val) # 0 - PI
+    radian = np.arccos(val)  # 0 - PI
     
     angle = radian * 180 / np.pi
     angle = np.nan_to_num(angle)
 
     return angle
-    
+
+
 # Save relevant parameter for further observation on reduce the neural network.
 def saveNNParas(model, input_data, vec_size):
     weight_mat = model.hidden.weight.data
     saveExcel(weight_mat, 'weight.xls', u'sheet1')
 
     a_hidden = model.getActivationVec(input_data)
-    saveExcel(a_hidden[:,:] - 0.5, 'activation.xls', u'sheet1')
+    saveExcel(a_hidden[:, :] - 0.5, 'activation.xls', u'sheet1')
     
     vectorangle_mat = np.zeros((vec_size, vec_size))
-    idx_list = list(range(1, vec_size))
-    vectorangle_mat[0, 1:] = idx_list[:]
-    vectorangle_mat[1: , 0] = idx_list[:]
-    for i in idx_list:
-        for j in idx_list:
+
+    for i in range(vec_size):
+        for j in  range(vec_size):
             if i == j:
                 vectorangle_mat[i][j] = 0
             else:
-                vectorangle_mat[i][j] = vector_angle(a_hidden[:, i-1], a_hidden[:, j-1])
-    saveExcel(vectorangle_mat, 'vector_angle.xls', u'sheet1', fill_color=True)
+                vectorangle_mat[i][j] = vector_angle(a_hidden[:, i], a_hidden[:, j])
+    saveExcel(vectorangle_mat, 'vector_angle.xls', u'sheet1', bVector=True)
     
     print("Datas has been successfully saved in Excel files!")
     
 # Save test data for validating the reduced network.
-def saveDataset(X_test, Y_test): 
-    testing_features = pd.DataFrame(X_test.data.numpy())
-    testing_features.to_excel('testing_features.xlsx', index=False)
+def saveDataset(x, y, sub_title):
+    features = pd.DataFrame(x.data.numpy())
+    features.to_excel(sub_title + '_features.xlsx', index=False)
         
-    training_class = pd.DataFrame(Y_test.data.numpy())
-    training_class.to_excel('testing_class.xlsx', index=False)
+    classes = pd.DataFrame(y.data.numpy())
+    classes.to_excel(sub_title + '_class.xlsx', index=False)
     
 # Load test data for validating the reduced network.
-def loadDataset():
-    X_test = pd.read_excel('testing_features.xlsx', header=None)
-    Y_test = pd.read_excel('testing_class.xlsx', header=None)  
+def loadDataset(sub_title):
+    x = pd.read_excel(sub_title + '_features.xlsx', header=None)
+    y = pd.read_excel(sub_title + '_class.xlsx', header=None)
 
-    X_test.drop(0, axis=0, inplace=True)
-    Y_test.drop(0, axis=0, inplace=True)
+    x.drop(0, axis=0, inplace=True)
+    y.drop(0, axis=0, inplace=True)
 
     # Create Tensors to hold inputs and outputs.
-    X_test = torch.Tensor(X_test.to_numpy()).float()
-    Y_test = torch.Tensor(Y_test.to_numpy()).long()
+    x = torch.Tensor(x.to_numpy()).float()
+    y = torch.Tensor(y.to_numpy()).long()
     
-    return X_test, Y_test
+    return x, y

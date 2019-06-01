@@ -3,6 +3,7 @@
 @author: Ulrich
 """
 
+import torch
 from data_loader import load_data
 from Net import Net, train_model, test_model
 from utils import confusion, F1_score, saveNNParas, saveDataset
@@ -15,7 +16,7 @@ all_features_num = 14
 hidden_num = 30
 classes_num = 3
 epochs_num = 1000
-learning_rate = 0.01
+learning_rate = 0.03
 
 genre_loc = 14 # Ignore the index column
 disturbing_conforting_loc = 15
@@ -55,11 +56,12 @@ start_time = time.time()
 accuracy, Y_pred = test_model(net, X_test, Y_test)
 print("Execution time: %s ms" % ((time.time() - start_time)*1000))
 
-##Save relevant parameter for analysis.
-#if accuracy > 40:
-#    saveNNParas(net, X_test, hidden_num+1)
-#    torch.save(net.state_dict(), 'net_model.pt')
-#    saveDataset(X_test, Y_test)
+#Save relevant parameter for analysis.
+if accuracy > 50:
+    saveNNParas(net, X_test, hidden_num)
+    torch.save(net.state_dict(), 'net_model.pt')
+    saveDataset(X_train, Y_train, 'training')
+    saveDataset(X_test, Y_test, 'testing')
 
 mat = confusion(X_test.size(0), classes_num, Y_pred, Y_test)
 print("Confusion Matrix：")

@@ -23,9 +23,9 @@ class RNN_model(nn.Module):
         h0 = Variable(torch.zeros(self.layer_dim, x.size(0), self.hidden_dim))
         
         # When using padded sequence, do not shuffle the date set in loading data.
-        x = pack_padded_sequence(x, seq_lens, batch_first = True)    
+#        x = pack_padded_sequence(x, seq_lens, batch_first = True)    
         out, hn = self.rnn(x, h0.detach())
-        out, _ = pad_packed_sequence(out, batch_first = True) 
+#        out, _ = pad_packed_sequence(out, batch_first = True) 
         
         out = self.fc(out[:, -1, :])
         out = self.softmax(out)

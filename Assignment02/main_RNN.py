@@ -17,7 +17,7 @@ hidden_dim = 20
 layer_dim = 1
 output_dim = 3  # Four kinds of genres within 12 songs.
 
-epochs = 1000
+epochs = 500
 lr = 0.01
 ############################################
 
