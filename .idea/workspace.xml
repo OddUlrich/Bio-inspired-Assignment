@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4ed46602-5158-4e89-bcd2-17c47234277b" name="reduce_net.py" comment="">
-      <change afterPath="$PROJECT_DIR$/Assignment02/reducing_net.py" afterDir="false" />
+    <list default="true" id="4ed46602-5158-4e89-bcd2-17c47234277b" name="reduce_net.py" comment="Renamed fixed files as operation samples.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment02/data_loader.py" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment02/data_loader.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment02/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment02/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment01/workplace(genre)/Results.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment01/workplace(genre)/Results.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment02/Net.py" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment02/Net.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment02/rnn_model.pt" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment02/rnn_model.pt" afterDir="false" />
     </list>
     <list id="812364a3-9208-4f06-950f-e8a87668fa28" name="Default Changelist" comment="Implemented ANN auto-pruning.">
       <change beforePath="$PROJECT_DIR$/Assignment02/RNN_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment02/RNN_model.py" afterDir="false" />
@@ -15,8 +15,8 @@
       <change beforePath="$PROJECT_DIR$/Assignment02/net_model_genre.pt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assignment02/paper/00317740.pdf" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assignment02/paper/Sheikhan2012_Article_IntrusionDetectionUsingReduced.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment02/testing_class.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment02/testing_class.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment02/testing_features.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment02/testing_features.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment02/testing_class.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment02/testing_features.xlsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assignment02/training_class.xlsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assignment02/training_features.xlsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assignment02/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment02/utils.py" afterDir="false" />
@@ -42,8 +42,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assignment02/Net.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="27" column="35" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
+            <state relative-caret-position="304">
+              <caret line="20" column="62" lean-forward="true" selection-start-line="20" selection-start-column="62" selection-end-line="20" selection-end-column="62" />
             </state>
           </provider>
         </entry>
@@ -52,7 +52,7 @@
         <entry file="file://$PROJECT_DIR$/Assignment02/utils.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="2413">
-              <caret line="132" selection-start-line="132" selection-end-line="132" />
+              <caret line="130" selection-start-line="130" selection-end-line="130" />
             </state>
           </provider>
         </entry>
@@ -107,14 +107,6 @@
         <option value="$PROJECT_DIR$/Assignment02/utils.py" />
       </list>
     </option>
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/Assignment02/utils.py">
-      <ranges>
-        <range start1="107" end1="107" start2="107" end2="109" changelist="812364a3-9208-4f06-950f-e8a87668fa28" />
-        <range start1="116" end1="117" start2="118" end2="119" changelist="4ed46602-5158-4e89-bcd2-17c47234277b" />
-      </ranges>
-    </file>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-10" />
@@ -386,7 +378,21 @@
       <option name="project" value="LOCAL" />
       <updated>1559377519894</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Implemented rnn reduction process.">
+      <created>1559463339245</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1559463339245</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Renamed fixed files as operation samples.">
+      <created>1559463384140</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1559463384140</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TodoView">
@@ -504,7 +510,9 @@
     <MESSAGE value="Trying soft code for network reduction." />
     <MESSAGE value="Soft code for pruning network." />
     <MESSAGE value="Implemented ANN auto-pruning." />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented ANN auto-pruning." />
+    <MESSAGE value="Implemented rnn reduction process." />
+    <MESSAGE value="Renamed fixed files as operation samples." />
+    <option name="LAST_COMMIT_MESSAGE" value="Renamed fixed files as operation samples." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
   <component name="editorHistoryManager">
@@ -582,7 +590,7 @@
     <entry file="file://$PROJECT_DIR$/Assignment02/utils.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2413">
-          <caret line="132" selection-start-line="132" selection-end-line="132" />
+          <caret line="130" selection-start-line="130" selection-end-line="130" />
         </state>
       </provider>
     </entry>
@@ -605,8 +613,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assignment02/Net.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="27" column="35" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
+        <state relative-caret-position="304">
+          <caret line="20" column="62" lean-forward="true" selection-start-line="20" selection-start-column="62" selection-end-line="20" selection-end-column="62" />
         </state>
       </provider>
     </entry>

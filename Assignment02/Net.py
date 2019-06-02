@@ -32,6 +32,8 @@ class Net(torch.nn.Module):
     def getActivationVec(self, input):
         z_hidden = self.hidden(input)
         a_hidden = torch.sigmoid(z_hidden)
+        a_hidden -= 0.5
+        
         return a_hidden
 
 
