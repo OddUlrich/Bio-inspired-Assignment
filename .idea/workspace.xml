@@ -1,8 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4ed46602-5158-4e89-bcd2-17c47234277b" name="reduce_net.py" comment="Finished all code and result analysis.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="4ed46602-5158-4e89-bcd2-17c47234277b" name="reduce_net.py" comment="Formatted file structure.">
+      <change beforePath="$PROJECT_DIR$/Assignment02/music-affect_v1/music-features-processed.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment02/music-affect_v1/music-features.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment02/music-affect_v2/S1.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment02/music-affect_v2/S10.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment02/music-affect_v2/S11.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment02/music-affect_v2/S12.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment02/music-affect_v2/S2.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment02/music-affect_v2/S3.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment02/music-affect_v2/S4.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment02/music-affect_v2/S5.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment02/music-affect_v2/S6.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment02/music-affect_v2/S7.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment02/music-affect_v2/S8.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment02/music-affect_v2/S9.xlsx" beforeDir="false" />
     </list>
     <list id="812364a3-9208-4f06-950f-e8a87668fa28" name="Default Changelist" comment="Implemented ANN auto-pruning.">
       <change beforePath="$PROJECT_DIR$/Assignment02/RNN_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment02/RNN_model.py" afterDir="false" />
@@ -349,7 +362,14 @@
       <option name="project" value="LOCAL" />
       <updated>1559489275070</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Formatted file structure.">
+      <created>1559491364114</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1559491364115</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TodoView">
@@ -470,7 +490,8 @@
     <MESSAGE value="Renamed fixed files as operation samples." />
     <MESSAGE value="Revised the offset operation for activation results." />
     <MESSAGE value="Finished all code and result analysis." />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished all code and result analysis." />
+    <MESSAGE value="Formatted file structure." />
+    <option name="LAST_COMMIT_MESSAGE" value="Formatted file structure." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
   <component name="editorHistoryManager">
