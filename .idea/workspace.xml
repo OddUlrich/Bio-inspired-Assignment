@@ -1,21 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4ed46602-5158-4e89-bcd2-17c47234277b" name="reduce_net.py" comment="Revised the offset operation for activation results.">
+    <list default="true" id="4ed46602-5158-4e89-bcd2-17c47234277b" name="reduce_net.py" comment="Finished all code and result analysis.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment01/workplace(genre)/Results.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment01/workplace(subjective rating)/Results.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment02/ANN Time of Electric Signals.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment02/ANN result of Electric Signals.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment02/NN.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment02/RNN.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment02/Sample_result.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment02/ann_net_model_genre.pt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment02/ann_vector_angle.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment02/main.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment02/main_RNN_pruning.py" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment02/main_RNN_pruning.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment02/rnn_model.pt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment02/vector_angle.xls" beforeDir="false" />
     </list>
     <list id="812364a3-9208-4f06-950f-e8a87668fa28" name="Default Changelist" comment="Implemented ANN auto-pruning.">
       <change beforePath="$PROJECT_DIR$/Assignment02/RNN_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment02/RNN_model.py" afterDir="false" />
@@ -39,56 +26,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assignment02/main_ANN.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="7" column="32" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Assignment02/Net.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
-              <caret line="31" column="38" selection-start-line="31" selection-start-column="38" selection-end-line="31" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assignment02/utils.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2413">
-              <caret line="130" selection-start-line="130" selection-end-line="130" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assignment02/main_RNN.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="627">
-              <caret line="38" selection-start-line="38" selection-end-line="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assignment02/data_loader.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1558">
-              <caret line="84" column="8" selection-start-line="84" selection-start-column="8" selection-end-line="84" selection-end-column="8" />
-              <folding>
-                <element signature="e#49#68#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -137,11 +75,6 @@
             <path>
               <item name="Bio-inspired-Assignment" type="b2602c69:ProjectViewProjectNode" />
               <item name="Bio-inspired-Assignment" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Bio-inspired-Assignment" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Bio-inspired-Assignment" type="462c0819:PsiDirectoryNode" />
-              <item name="Assignment02" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -409,7 +342,14 @@
       <option name="project" value="LOCAL" />
       <updated>1559466611492</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Finished all code and result analysis.">
+      <created>1559489275070</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1559489275070</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TodoView">
@@ -423,9 +363,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28599736" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28599736" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -530,7 +469,8 @@
     <MESSAGE value="Implemented rnn reduction process." />
     <MESSAGE value="Renamed fixed files as operation samples." />
     <MESSAGE value="Revised the offset operation for activation results." />
-    <option name="LAST_COMMIT_MESSAGE" value="Revised the offset operation for activation results." />
+    <MESSAGE value="Finished all code and result analysis." />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished all code and result analysis." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
   <component name="editorHistoryManager">
@@ -598,16 +538,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assignment02/main_reduction_genre.py" />
     <entry file="file://$PROJECT_DIR$/Assignment02/reducing_net.py" />
-    <entry file="file://$PROJECT_DIR$/Assignment02/main_ANN.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="32" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assignment02/utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2413">
+        <state relative-caret-position="1245">
           <caret line="130" selection-start-line="130" selection-end-line="130" />
         </state>
       </provider>
@@ -621,7 +554,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assignment02/data_loader.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1558">
+        <state relative-caret-position="-351">
           <caret line="84" column="8" selection-start-line="84" selection-start-column="8" selection-end-line="84" selection-end-column="8" />
           <folding>
             <element signature="e#49#68#0" expanded="true" />
@@ -631,8 +564,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assignment02/Net.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="31" column="38" selection-start-line="31" selection-start-column="38" selection-end-line="31" selection-end-column="38" />
+        <state relative-caret-position="-570">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assignment02/main_ANN.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="656">
+          <caret line="41" column="40" lean-forward="true" selection-start-line="41" selection-start-column="40" selection-end-line="41" selection-end-column="40" />
+          <folding>
+            <element signature="e#49#61#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
