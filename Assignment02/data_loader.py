@@ -101,7 +101,7 @@ def seq_loader():
     x_train = raw_train_data.T.iloc[:, 2:].sample(frac=1).reset_index(drop=True).to_numpy()
 #    x_train = raw_train_data.T.iloc[:, 2:].to_numpy()
 
-#     Create one-hot vector for y_train with the second column of genre classes.
+    # Create one-hot vector for y_train with the second column of genre classes.
     class_train = raw_train_data.T.iloc[:, 1].to_numpy()
     y_train = np.zeros((class_train.shape[0], 3))
     for i in range(class_train.shape[0]):

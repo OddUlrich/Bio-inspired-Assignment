@@ -114,7 +114,7 @@ def saveNNParas(model, input_data, vec_size):
                 vectorangle_mat[i][j] = vector_angle(a_hidden[:, i], a_hidden[:, j])
     saveExcel(vectorangle_mat, 'vector_angle.xls', u'sheet1', bVector=True)
     
-    print("Datas has been successfully saved in Excel files!\n")
+    print("Vector angles has been successfully saved in Excel files!\n")
     
 # Save test data for validating the reduced network.
 def saveDataset(x, y, sub_title):
