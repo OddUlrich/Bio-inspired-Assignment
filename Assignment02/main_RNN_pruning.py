@@ -14,7 +14,7 @@ import time
 
 # Loading the previous network status.
 input_dim = 1
-hidden_dim = 40
+hidden_dim = 50
 layer_dim = 1
 output_dim = 3  # Four kinds of genres within 12 songs.
 
@@ -48,7 +48,7 @@ rnns = []
 times = []
 old_rnn = load_rnn
 cnt = 0
-hidden_dim = 30
+hidden_num = hidden_dim
 
 # To maintain normal performance of the network, we only remove less than 10 hidden units.
 while cnt < 10:
@@ -59,10 +59,10 @@ while cnt < 10:
         
     for index, row in decrease_res.iterrows():
         if row['row'] in unique_row and row['col'] in unique_col and row['row'] not in unique_col:
-            hidden_dim -= 2
-            new_rnn = reduced_rnn_net(old_rnn, int(row['row']), int(row['col']), hidden_dim)
+            hidden_num -= 2
+            new_rnn = reduced_rnn_net(old_rnn, int(row['row']), int(row['col']), hidden_num)
 
-            print("\n======= RNN hidden size: {}==========\n".format(hidden_dim))
+            print("\n======= RNN hidden size: {}==========\n".format(hidden_num))
 
             start_time = time.time()
             # Unsqueeze from 2-dimension to 3-dimension to match the rnn model.
@@ -78,7 +78,7 @@ while cnt < 10:
             rnns.append(new_rnn)
             old_rnn = new_rnn
 
-            saveNNParas(new_rnn, x_test, hidden_dim)
+            saveNNParas(new_rnn, x_test, hidden_num)
             vectors = pd.read_excel('vector_angle.xls', header=None)
             if (vectors.empty):
                 cnt = 10
